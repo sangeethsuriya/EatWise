@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>EatWise // Login</title>
+    <link rel="stylesheet" href="/static/css/gemini.css">
+</head>
+
+<body>
+    <div class="auth-container">
+        <div class="auth-box card">
+            <h1 style="color: var(--primary-color); margin-bottom: 8px;">EatWise 🌿</h1>
+            <p style="color: var(--text-secondary); margin-bottom: 30px;">Your personal AI nutrition companion.</p>
+
+            <div
+                style="display: flex; gap: 10px; margin-bottom: 24px; padding: 4px; background: #f1f5f9; border-radius: 50px;">
+                <button onclick="setMode('login')" id="btn-login" class="btn"
+                    style="flex:1; border-radius: 50px; background: white; color: var(--text-primary); box-shadow: var(--shadow-sm);">Login</button>
+                <button onclick="setMode('register')" id="btn-register" class="btn"
+                    style="flex:1; border-radius: 50px; background: transparent; color: var(--text-secondary); box-shadow: none;">Register</button>
+            </div>
+
+            <div style="text-align: left; display: flex; flex-direction: column; gap: 16px;">
+                <input type="email" id="email" class="input-field" placeholder="Email Address">
+                <input type="password" id="password" class="input-field" placeholder="Password">
+
+                <div id="verify-section" style="display:none; animation: fadeIn 0.3s;">
+                    <p style="font-size: 0.8rem; color: var(--primary-color); margin: 0 0 8px 0;">We sent a code to your
+                        email.</p>
+                    <div style="display:flex; gap: 8px;">
+                        <input type="text" id="code" class="input-field" placeholder="000000">
+                        <button onclick="doVerify()" class="btn btn-secondary">Verify</button>
+                    </div>
+                </div>
+
+                <button onclick="doAction()" class="btn" id="btn-action">Log In</button>
+            </div>
+
+            <div id="status" style="margin-top: 16px; font-size: 0.9rem; min-height: 20px;"></div>
+        </div>
+    </div>
+
+    <script>
+        let mode = 'login';
+
+        function setMode(m) {
+            mode = m;
+            const loginBtn = document.getElementById('btn-login');
+            const regBtn = document.getElementById('btn-register');
+            const actionBtn = document.getElementById('btn-action');
+
+            if (m === 'login') {
+                loginBtn.style.background = 'white';
+                loginBtn.style.color = 'var(--text-primary)';
+                loginBtn.style.boxShadow = 'var(--shadow-sm)';
+
+                regBtn.style.background = 'transparent';
+                regBtn.style.color = 'var(--text-secondary)';
+                regBtn.style.boxShadow = 'none';
+
+                actionBtn.innerText = "Log In";
+            } else {
+                regBtn.style.background = 'white';
+                regBtn.style.color = 'var(--text-primary)';
+                regBtn.style.boxShadow = 'var(--shadow-sm)';
+
+                loginBtn.style.background = 'transparent';
+                loginBtn.style.color = 'var(--text-secondary)';
+                loginBtn.style.boxShadow = 'none';
+
+                actionBtn.innerText = "Create Account";
+            }
+            document.getElementById('status').innerText = "";
+        }
+
+        async function doAction() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const status = document.getElementById('status');
+
+            if (!email || !password) { status.innerText = "Please fill all fields."; status.style.color = "red"; return; }
+            status.innerText = "Processing...";
+            status.style.color = "var(--text-secondary)";
+
+            const endpoint = mode === 'login' ? '/auth/login' : '/auth/register';
+
+            try {
+                const res = await fetch(endpoint, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, password })
+                });
+
+                if (res.ok) {
+                    if (mode === 'login') {
+                        const data = await res.json();
+                        localStorage.setItem('token', data.access_token);
+                        // Redirect to Onboarding for new users or Dash for returning?
+                        // For now, check if "session" exists or just go to Dash. 
+                        // Actually, logic: Go to Dashboard, Dashboard checks if profile incomplete.
+                        // Or simple: Go to Dashboard.
+                        window.location.href = '/dashboard';
+                    } else {
+                        status.innerText = "Verification code sent! (Check Console/Logs)";
+                        status.style.color = "green";
+                        document.getElementById('verify-section').style.display = 'block';
+                    }
+                } else {
+                    const err = await res.json();
+                    status.innerText = err.detail || "Error occurred.";
+                    status.style.color = "red";
+                }
+            } catch (e) {
+                status.innerText = "Network Error.";
+                status.style.color = "red";
+            }
+        }
+
+        async function doVerify() {
+            const email = document.getElementById('email').value;
+            const code = document.getElementById('code').value;
+            try {
+                const res = await fetch('/auth/verify', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, code })
+                });
+                if (res.ok) {
+                    alert("Verified! Please login.");
+                    setMode('login');
+                    document.getElementById('verify-section').style.display = 'none';
+                } else {
+                    alert("Invalid code.");
+                }
+            } catch (e) { alert("Error verifying."); }
+        }
+    </script>
+</body>
+
+</html>

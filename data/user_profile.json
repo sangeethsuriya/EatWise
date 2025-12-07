@@ -1,0 +1,120 @@
+{
+  "name": "User",
+  "favorites": [],
+  "history": [
+    {
+      "date": "2025-12-06",
+      "timestamp": "2025-12-06T21:24:48.402407",
+      "food": "chicken sandwich",
+      "nutrients": {
+        "source": "user_input"
+      }
+    },
+    {
+      "date": "2025-12-06",
+      "timestamp": "2025-12-06T22:12:22.414421",
+      "food": "chicken sandwich",
+      "nutrients": {
+        "source": "user_input"
+      }
+    }
+  ],
+  "preferences": [],
+  "facts": [
+    "I am pescatarian",
+    "I am sangeet"
+  ],
+  "sessions": {
+    "09fb44c7-da36-42f9-bac6-e0d77778a346": {
+      "id": "09fb44c7-da36-42f9-bac6-e0d77778a346",
+      "title": "hello there",
+      "timestamp": "2025-12-06T23:48:11.896667",
+      "messages": [
+        {
+          "role": "user",
+          "content": "hello there",
+          "timestamp": "2025-12-06T23:48:11.897633"
+        },
+        {
+          "role": "assistant",
+          "content": "Nutrition for hello: hello. Protein: 0g. Fat: 0g. Carbohydrates: 0g. Energy: 0kcal. \n*(Source: Learned Knowledge)*",
+          "timestamp": "2025-12-06T23:48:20.600491"
+        }
+      ]
+    },
+    "c60a01b4-1f69-4f38-bd29-42c18d2f9727": {
+      "id": "c60a01b4-1f69-4f38-bd29-42c18d2f9727",
+      "title": "canned tuna",
+      "timestamp": "2025-12-06T23:48:41.746449",
+      "messages": [
+        {
+          "role": "user",
+          "content": "canned tuna",
+          "timestamp": "2025-12-06T23:48:41.747437"
+        },
+        {
+          "role": "assistant",
+          "content": "Nutrition for how much nutritional values in 100grams of canned tuna: Canned Tuna. Protein: 25g. Fat: 1g. Carbohydrates: 0g. Energy: 116kcal. \n*(Source: Learned Knowledge)*",
+          "timestamp": "2025-12-06T23:48:46.447871"
+        },
+        {
+          "role": "user",
+          "content": "hello",
+          "timestamp": "2025-12-06T23:50:21.328297"
+        },
+        {
+          "role": "assistant",
+          "content": "Nutrition for hello: hello. Protein: 0g. Fat: 0g. Carbohydrates: 0g. Energy: 0kcal. \n*(Source: Learned Knowledge)*",
+          "timestamp": "2025-12-06T23:50:25.658382"
+        },
+        {
+          "role": "user",
+          "content": "I am sangeet",
+          "timestamp": "2025-12-06T23:52:02.078407"
+        },
+        {
+          "role": "assistant",
+          "content": "Vitamin C boosts immune function and helps absorb iron. Found in citrus fruits, strawberries, bell peppers, and broccoli. Daily need: 65-90mg.\n*(Source: Learned Knowledge)*",
+          "timestamp": "2025-12-06T23:52:06.792835"
+        }
+      ]
+    },
+    "d443078f-1e9a-4370-b02e-2e2928156a30": {
+      "id": "d443078f-1e9a-4370-b02e-2e2928156a30",
+      "title": "hello there",
+      "timestamp": "2025-12-07T00:01:52.867256",
+      "messages": [
+        {
+          "role": "user",
+          "content": "hello there",
+          "timestamp": "2025-12-07T00:01:52.868388"
+        },
+        {
+          "role": "assistant",
+          "content": "Hello there! \ud83d\udc4b\n\nIt looks like you\u2019re greeting me, and while \u201chello\u201d doesn\u2019t have any nutritional value (no protein, fat, carbs, or calories!), it\u2019s always a great way to start a conversation about healthy eating.\n\nIf you have any questions about nutrition, meal planning, or specific dietary needs, feel free to ask. I\u2019m here to help you make informed, balanced choices for your health!",
+          "timestamp": "2025-12-07T00:02:01.171961"
+        },
+        {
+          "role": "user",
+          "content": "canned tuna",
+          "timestamp": "2025-12-07T00:02:34.806918"
+        },
+        {
+          "role": "assistant",
+          "content": "Canned tuna is a nutritious and convenient protein source. Here\u2019s a simple breakdown of what you get in 100 grams of canned tuna:\n\n- **Protein:** 25 grams  \n  This is a high amount, making canned tuna excellent for muscle repair, satiety, and overall health.\n\n- **Fat:** 1 gram  \n  Very low in fat, which can be helpful if you\u2019re watching your fat intake.\n\n- **Carbohydrates:** 0 grams  \n  Tuna contains virtually no carbs, so it fits well in low-carb or ketogenic diets.\n\n- **Calories:** 116 kcal  \n  Relatively low in calories, making it a good option for weight management.\n\n**Extra tips:**  \n- Canned tuna is also a source of important nutrients like vitamin D, selenium, and omega-3 fatty acids (though the amount of omega-3 can vary).\n- For heart health, choose tuna canned in water rather than oil.\n- If you\u2019re concerned about sodium, look for low-sodium versions.\n\nYou\u2019re making a smart choice by considering canned tuna\u2014it\u2019s versatile, affordable, and packs a lot of nutrition into a small serving! If you have specific dietary needs or health goals, let me know and I can help you tailor your choices.",
+          "timestamp": "2025-12-07T00:02:45.265120"
+        },
+        {
+          "role": "user",
+          "content": "carrots",
+          "timestamp": "2025-12-07T00:04:05.303035"
+        },
+        {
+          "role": "assistant",
+          "content": "Carrots are a fantastic, nutritious vegetable to include in your diet! They are especially well known for being rich in vitamin A, which is important for:\n\n- **Vision:** Vitamin A helps keep your eyes healthy and supports good night vision.\n- **Immune Health:** It also plays a key role in keeping your immune system strong, helping your body fight off illnesses.\n\nCarrots are also low in calories and provide fiber, which is great for digestion. You can enjoy them raw, cooked, or even blended into smoothies.\n\nAdding carrots to your meals is a simple and delicious way to support your overall health!",
+          "timestamp": "2025-12-07T00:04:13.776308"
+        }
+      ]
+    }
+  }
+}

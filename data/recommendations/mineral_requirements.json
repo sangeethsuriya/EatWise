@@ -1,0 +1,30 @@
+{
+    "19-64": {
+        "male": {
+            "iron_mg": 8.7,
+            "calcium_mg": 700,
+            "magnesium_mg": 300,
+            "potassium_mg": 3500,
+            "zinc_mg": 9.5,
+            "copper_mg": 1.2,
+            "iodine_mcg": 140,
+            "selenium_mcg": 75,
+            "phosphorus_mg": 550,
+            "chloride_mg": 2500,
+            "sodium_g": 2.4
+        },
+        "female": {
+            "iron_mg": 14.8,
+            "calcium_mg": 700,
+            "magnesium_mg": 270,
+            "potassium_mg": 3500,
+            "zinc_mg": 7.0,
+            "copper_mg": 1.2,
+            "iodine_mcg": 140,
+            "selenium_mcg": 60,
+            "phosphorus_mg": 550,
+            "chloride_mg": 2500,
+            "sodium_g": 2.4
+        }
+    }
+}

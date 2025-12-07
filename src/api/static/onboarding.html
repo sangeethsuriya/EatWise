@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>EatWise // Onboarding</title>
+    <link rel="stylesheet" href="/static/css/gemini.css">
+    <style>
+        .wizard-container {
+            max-width: 600px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .step {
+            display: none;
+            animation: slideIn 0.3s;
+        }
+
+        .step.active {
+            display: block;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .option-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .option-card {
+            padding: 20px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .option-card:hover,
+        .option-card.selected {
+            border-color: var(--primary-color);
+            background: var(--primary-light);
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wizard-container card">
+        <div id="steps">
+            <!-- Step 0: Welcome -->
+            <div class="step active" data-id="0">
+                <h2>Welcome to EatWise 🌿</h2>
+                <p style="color:var(--text-secondary)">Let's build your personalized nutrition profile.</p>
+                <button class="btn" style="margin-top:20px;" onclick="nextStep()">Get Started</button>
+            </div>
+
+            <!-- Q1: Name -->
+            <div class="step" data-id="1">
+                <h3>What is your name?</h3>
+                <input type="text" class="input-field" id="q-name" placeholder="Name">
+                <button class="btn" style="margin-top:20px;"
+                    onclick="saveAnswer('name', 'q-name'); nextStep()">Next</button>
+            </div>
+
+            <!-- Q2: Age -->
+            <div class="step" data-id="2">
+                <h3>How old are you?</h3>
+                <input type="number" class="input-field" id="q-age" placeholder="Age">
+                <button class="btn" style="margin-top:20px;"
+                    onclick="saveAnswer('age', 'q-age'); nextStep()">Next</button>
+            </div>
+
+            <!-- Q3: Goal -->
+            <div class="step" data-id="3">
+                <h3>What is your main goal?</h3>
+                <div class="option-grid">
+                    <div class="option-card" onclick="selectOption(this, 'goal', 'Lose Weight')">Lose Weight</div>
+                    <div class="option-card" onclick="selectOption(this, 'goal', 'Gain Muscle')">Gain Muscle</div>
+                    <div class="option-card" onclick="selectOption(this, 'goal', 'Maintain')">Maintain</div>
+                    <div class="option-card" onclick="selectOption(this, 'goal', 'Eat Healthier')">Eat Healthier</div>
+                </div>
+            </div>
+
+            <!-- Q4: Diet -->
+            <div class="step" data-id="4">
+                <h3>Do you follow any diet?</h3>
+                <div class="option-grid">
+                    <div class="option-card" onclick="selectOption(this, 'diet', 'None')">No Restrictions</div>
+                    <div class="option-card" onclick="selectOption(this, 'diet', 'Vegan')">Vegan</div>
+                    <div class="option-card" onclick="selectOption(this, 'diet', 'Vegetarian')">Vegetarian</div>
+                    <div class="option-card" onclick="selectOption(this, 'diet', 'Keto')">Keto</div>
+                    <div class="option-card" onclick="selectOption(this, 'diet', 'Gluten Free')">Gluten Free</div>
+                    <div class="option-card" onclick="selectOption(this, 'diet', 'Paleo')">Paleo</div>
+                </div>
+            </div>
+
+            <!-- Q5: Allergies -->
+            <div class="step" data-id="5">
+                <h3>Any allergies?</h3>
+                <input type="text" class="input-field" id="q-allergy" placeholder="e.g. Peanuts, Shellfish (Optional)">
+                <button class="btn" style="margin-top:20px;"
+                    onclick="saveAnswer('allergy', 'q-allergy'); nextStep()">Next</button>
+            </div>
+
+            <!-- Q6: Weight -->
+            <div class="step" data-id="6">
+                <h3>Current Weight (kg)?</h3>
+                <input type="number" class="input-field" id="q-weight" placeholder="kg">
+                <button class="btn" style="margin-top:20px;"
+                    onclick="saveAnswer('weight', 'q-weight'); nextStep()">Next</button>
+            </div>
+
+            <!-- Q7: Height -->
+            <div class="step" data-id="7">
+                <h3>Height (cm)?</h3>
+                <input type="number" class="input-field" id="q-height" placeholder="cm">
+                <button class="btn" style="margin-top:20px;"
+                    onclick="saveAnswer('height', 'q-height'); nextStep()">Next</button>
+            </div>
+
+            <!-- Q8: Activity -->
+            <div class="step" data-id="8">
+                <h3>Activity Level?</h3>
+                <div class="option-grid">
+                    <div class="option-card" onclick="selectOption(this, 'activity', 'Sedentary')">Sedentary</div>
+                    <div class="option-card" onclick="selectOption(this, 'activity', 'Light Active')">Light Active</div>
+                    <div class="option-card" onclick="selectOption(this, 'activity', 'Active')">Active</div>
+                    <div class="option-card" onclick="selectOption(this, 'activity', 'Very Active')">Very Active</div>
+                </div>
+            </div>
+
+            <!-- Q9: Water -->
+            <div class="step" data-id="9">
+                <h3>Daily Water Intake?</h3>
+                <div class="option-grid">
+                    <div class="option-card" onclick="selectOption(this, 'water', 'Low (<1L)')">Low (&lt;1L)</div>
+                    <div class="option-card" onclick="selectOption(this, 'water', 'Medium (1-2L)')">Medium (1-2L)</div>
+                    <div class="option-card" onclick="selectOption(this, 'water', 'High (>2L)')">High (&gt;2L)</div>
+                </div>
+            </div>
+
+            <!-- Q10: Cooking -->
+            <div class="step" data-id="10">
+                <h3>How often do you cook?</h3>
+                <div class="option-grid">
+                    <div class="option-card" onclick="selectOption(this, 'cooking', 'Never')">Never</div>
+                    <div class="option-card" onclick="selectOption(this, 'cooking', 'Sometimes')">Sometimes</div>
+                    <div class="option-card" onclick="selectOption(this, 'cooking', 'Daily')">Daily</div>
+                </div>
+            </div>
+
+            <!-- Completion -->
+            <div class="step" data-id="11">
+                <h2>Profile Complete! 🚀</h2>
+                <p>Generating your nutrition plan...</p>
+                <div id="loading" style="margin:20px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentStep = 0;
+        const answers = {};
+        const token = localStorage.getItem('token');
+        if (!token) window.location.href = '/';
+
+        function nextStep() {
+            document.querySelector(`.step[data-id="${currentStep}"]`).classList.remove('active');
+            currentStep++;
+            const next = document.querySelector(`.step[data-id="${currentStep}"]`);
+            if (next) {
+                next.classList.add('active');
+                if (currentStep === 11) finishOnboarding();
+            }
+        }
+
+        function saveAnswer(key, inputId) {
+            const val = document.getElementById(inputId).value;
+            if (val) answers[key] = val;
+        }
+
+        function selectOption(el, key, val) {
+            answers[key] = val;
+            nextStep();
+        }
+
+        async function finishOnboarding() {
+            console.log("Submitting:", answers);
+            // Submit facts to graph (Sequence)
+            // Ideally backend would handle batch, but for now we loop
+            const facts = [
+                `My name is ${answers.name}`,
+                `I am ${answers.age} years old`,
+                `My goal is to ${answers.goal}`,
+                `My diet is ${answers.diet}`,
+                `I have allergy to ${answers.allergy || 'nothing'}`,
+                `My weight is ${answers.weight}kg`,
+                `My height is ${answers.height}cm`,
+                `My activity level is ${answers.activity}`,
+                `I drink ${answers.water} water`,
+                `I cook ${answers.cooking}`
+            ];
+
+            for (const fact of facts) {
+                try {
+                    // Extract keyword logic implied in 'save_fact' in 'user_profile'
+                    // We can call /chat with "hidden" instruction?
+                    // Better: POST /graph/node directly. 
+                    // Actually, let's use the 'chat' endpoint to "Log" this silently? 
+                    // No, cleaner is to manually create nodes.
+                    // But 'save_fact' in backend does heuristics. 
+
+                    // Simple hack: Call the 'chat' endpoint with a system log to force extraction?
+                    // Or better: Just create nodes.
+
+                    // Let's create 'FACT' nodes manually via /graph/node
+                    const label = fact;
+                    // Wait, labeling the node "My name is X" is bad visual.
+                    // Should be specific. 
+                    // Let's rely on backend 'save_fact' logic?
+                    // But 'save_fact' isn't exposed as API.
+
+                    // Let's create a temporary "Profile Summary" string and send it to the Chat as the FIRST message of the session?
+                    // "System: User Profile: [facts...]"
+                } catch (e) { }
+            }
+
+            // Actually, best way: Send a specialized "init_profile" request or just store in localStorage for the "first message".
+            // Let's send a single /chat message with all context.
+            const summary = "Start Protocol. User Profile: " + facts.join(". ");
+
+            try {
+                await fetch('/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        query: summary,
+                        session_id: null,
+                        voice_enabled: false
+                    })
+                });
+            } catch (e) { }
+
+            setTimeout(() => {
+                window.location.href = '/dashboard';
+            }, 2000);
+        }
+    </script>
+</body>
+
+</html>

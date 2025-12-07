@@ -1,0 +1,486 @@
+{
+  "documents": [
+    "Proteins are essential macronutrients that help build and repair muscles. Good sources include chicken, fish, eggs, beans, and tofu. Adults need about 0.8g of protein per kg of body weight daily.",
+    "Carbohydrates are the body's main energy source. Complex carbs (whole grains, vegetables) are healthier than simple carbs (sugar, white bread). About 45-65% of daily calories should come from carbs.",
+    "Healthy fats are essential for brain function and hormone production. Sources include avocados, nuts, olive oil, and fatty fish. Limit saturated and trans fats.",
+    "Fiber aids digestion and helps maintain healthy blood sugar levels. Good sources include whole grains, fruits, vegetables, and legumes. Adults need 25-38g daily.",
+    "Vitamin C boosts immune function and helps absorb iron. Found in citrus fruits, strawberries, bell peppers, and broccoli. Daily need: 65-90mg.",
+    "Vitamin D is essential for bone health and immune function. Sources include sunlight, fatty fish, and fortified foods. Many people are deficient.",
+    "Vitamin B12 is crucial for nerve function and red blood cell formation. Found mainly in animal products. Vegans should supplement.",
+    "Vitamin A supports vision and immune health. Found in carrots, sweet potatoes, spinach, and liver.",
+    "Calcium is essential for strong bones and teeth. Found in dairy, leafy greens, and fortified foods. Adults need 1000-1200mg daily.",
+    "Iron carries oxygen in the blood. Found in red meat, beans, spinach, and fortified cereals. Women need more iron than men.",
+    "Potassium helps regulate blood pressure and muscle function. Found in bananas, potatoes, and leafy greens.",
+    "Magnesium supports muscle and nerve function. Found in nuts, seeds, whole grains, and dark chocolate.",
+    "A balanced diet includes fruits, vegetables, whole grains, lean proteins, and healthy fats. Limit processed foods, added sugars, and sodium.",
+    "Hydration is essential. Adults should drink about 8 glasses (2 liters) of water daily, more during exercise or hot weather.",
+    "Eating a variety of colorful vegetables ensures you get different nutrients. Each color represents different beneficial compounds.",
+    "Portion control is key for weight management. Use smaller plates and be mindful of serving sizes.",
+    "Nutrition for apple: Apple, candied. Protein: 1.34G. Total lipid (fat): 2.15G. Carbohydrate, by difference: 29.61G. Energy: 134KCAL. Fiber, total dietary: 1.8G. ",
+    "Nutrition for banana: Bananas, dehydrated, or banana powder. Energy: 1450.0kJ. Protein: 3.89G. Total lipid (fat): 1.81G. Carbohydrate, by difference: 88.3G. Energy: 346KCAL. Fiber, total dietary: 9.9G. ",
+    "Nutrition for orange: Orange, raw. Protein: 0.92G. Total lipid (fat): 0.14G. Carbohydrate, by difference: 11.78G. Energy: 50KCAL. Fiber, total dietary: 2.2G. ",
+    "Nutrition for strawberry: Strawberries, raw. Protein: 0.64G. Total lipid (fat): 0.22G. Carbohydrate, by difference: 7.96G. Energy: 36KCAL. Fiber, total dietary: 1.8G. ",
+    "Nutrition for blueberry: Blueberries, raw. Protein: 0.7G. Total lipid (fat): 0.31G. Carbohydrate, by difference: 14.57G. Energy: 64KCAL. Fiber, total dietary: 2.4G. ",
+    "Nutrition for chicken breast: Chicken breast, rotisserie, skin not eaten. Protein: 28.04G. Total lipid (fat): 3.57G. Carbohydrate, by difference: 0G. Energy: 144KCAL. Fiber, total dietary: 0G. ",
+    "Nutrition for dragon fruit: Dragon Fruit. Protein: 1.2g. Fat: 0g. Carbohydrates: 13g. Energy: 60kcal. ",
+    "Nutrition for nutrition for apple: Apple. Protein: 0.3g. Fat: 0g. Carbohydrates: 14g. Energy: 52kcal. ",
+    "Nutrition for nutrition of an apple: Apple. Protein: 0.3g. Fat: 0.2g. Carbohydrates: 14g. Energy: 52kcal. ",
+    "Nutrition for hi: hi. Protein: 0g. Fat: 0g. Carbohydrates: 0g. Energy: 0kcal. ",
+    "Nutrition for hello: hello. Protein: 0g. Fat: 0g. Carbohydrates: 0g. Energy: 0kcal. ",
+    "Nutrition for i need to know what my favorite food is: I need to know what my favorite food is. Protein: 0g. Fat: 0g. Carbohydrates: 0g. Energy: 0kcal. ",
+    "Nutrition for how much nutritional values in 100grams of canned tuna: Canned Tuna. Protein: 25g. Fat: 1g. Carbohydrates: 0g. Energy: 116kcal. ",
+    "Nutrition for what is the nutritional value for the canned tuna: Canned Tuna. Protein: 25g. Fat: 1g. Carbohydrates: 0g. Energy: 110kcal. ",
+    "Nutrition for and what to eat in those for low carbs: Low-carb foods. Protein: 20g. Fat: 10g. Carbohydrates: 5g. Energy: 200kcal. "
+  ],
+  "doc_ids": [
+    "knowledge_0",
+    "knowledge_1",
+    "knowledge_2",
+    "knowledge_3",
+    "knowledge_4",
+    "knowledge_5",
+    "knowledge_6",
+    "knowledge_7",
+    "knowledge_8",
+    "knowledge_9",
+    "knowledge_10",
+    "knowledge_11",
+    "knowledge_12",
+    "knowledge_13",
+    "knowledge_14",
+    "knowledge_15",
+    "food_apple",
+    "food_banana",
+    "food_orange",
+    "food_strawberry",
+    "food_blueberry",
+    "food_chicken_breast",
+    "food_dragon_fruit",
+    "food_nutrition_for_apple",
+    "food_nutrition_of_an_apple",
+    "food_hi",
+    "food_hello",
+    "food_i_need_to_know_what_my_favorite_food_is",
+    "food_how_much_nutritional_values_in_100grams_of_canned_tuna",
+    "food_what_is_the_nutritional_value_for_the_canned_tuna",
+    "food_and_what_to_eat_in_those_for_low_carbs"
+  ],
+  "structured_data": {
+    "apple": {
+      "description": "Apple, candied",
+      "fdcId": 2709294,
+      "nutrients": [
+        {
+          "name": "Protein",
+          "amount": 1.34,
+          "unit": "G"
+        },
+        {
+          "name": "Total lipid (fat)",
+          "amount": 2.15,
+          "unit": "G"
+        },
+        {
+          "name": "Carbohydrate, by difference",
+          "amount": 29.61,
+          "unit": "G"
+        },
+        {
+          "name": "Energy",
+          "amount": 134,
+          "unit": "KCAL"
+        },
+        {
+          "name": "Fiber, total dietary",
+          "amount": 1.8,
+          "unit": "G"
+        }
+      ]
+    },
+    "banana": {
+      "description": "Bananas, dehydrated, or banana powder",
+      "fdcId": 173945,
+      "nutrients": [
+        {
+          "name": "Energy",
+          "amount": 1450.0,
+          "unit": "kJ"
+        },
+        {
+          "name": "Protein",
+          "amount": 3.89,
+          "unit": "G"
+        },
+        {
+          "name": "Total lipid (fat)",
+          "amount": 1.81,
+          "unit": "G"
+        },
+        {
+          "name": "Carbohydrate, by difference",
+          "amount": 88.3,
+          "unit": "G"
+        },
+        {
+          "name": "Energy",
+          "amount": 346,
+          "unit": "KCAL"
+        },
+        {
+          "name": "Fiber, total dietary",
+          "amount": 9.9,
+          "unit": "G"
+        }
+      ]
+    },
+    "orange": {
+      "description": "Orange, raw",
+      "fdcId": 2709171,
+      "nutrients": [
+        {
+          "name": "Protein",
+          "amount": 0.92,
+          "unit": "G"
+        },
+        {
+          "name": "Total lipid (fat)",
+          "amount": 0.14,
+          "unit": "G"
+        },
+        {
+          "name": "Carbohydrate, by difference",
+          "amount": 11.78,
+          "unit": "G"
+        },
+        {
+          "name": "Energy",
+          "amount": 50,
+          "unit": "KCAL"
+        },
+        {
+          "name": "Fiber, total dietary",
+          "amount": 2.2,
+          "unit": "G"
+        }
+      ]
+    },
+    "strawberry": {
+      "description": "Strawberries, raw",
+      "fdcId": 2709283,
+      "nutrients": [
+        {
+          "name": "Protein",
+          "amount": 0.64,
+          "unit": "G"
+        },
+        {
+          "name": "Total lipid (fat)",
+          "amount": 0.22,
+          "unit": "G"
+        },
+        {
+          "name": "Carbohydrate, by difference",
+          "amount": 7.96,
+          "unit": "G"
+        },
+        {
+          "name": "Energy",
+          "amount": 36,
+          "unit": "KCAL"
+        },
+        {
+          "name": "Fiber, total dietary",
+          "amount": 1.8,
+          "unit": "G"
+        }
+      ]
+    },
+    "blueberry": {
+      "description": "Blueberries, raw",
+      "fdcId": 2709275,
+      "nutrients": [
+        {
+          "name": "Protein",
+          "amount": 0.7,
+          "unit": "G"
+        },
+        {
+          "name": "Total lipid (fat)",
+          "amount": 0.31,
+          "unit": "G"
+        },
+        {
+          "name": "Carbohydrate, by difference",
+          "amount": 14.57,
+          "unit": "G"
+        },
+        {
+          "name": "Energy",
+          "amount": 64,
+          "unit": "KCAL"
+        },
+        {
+          "name": "Fiber, total dietary",
+          "amount": 2.4,
+          "unit": "G"
+        }
+      ]
+    },
+    "chicken breast": {
+      "description": "Chicken breast, rotisserie, skin not eaten",
+      "fdcId": 2705964,
+      "nutrients": [
+        {
+          "name": "Protein",
+          "amount": 28.04,
+          "unit": "G"
+        },
+        {
+          "name": "Total lipid (fat)",
+          "amount": 3.57,
+          "unit": "G"
+        },
+        {
+          "name": "Carbohydrate, by difference",
+          "amount": 0,
+          "unit": "G"
+        },
+        {
+          "name": "Energy",
+          "amount": 144,
+          "unit": "KCAL"
+        },
+        {
+          "name": "Fiber, total dietary",
+          "amount": 0,
+          "unit": "G"
+        }
+      ]
+    },
+    "dragon fruit": {
+      "description": "Dragon Fruit",
+      "nutrients": [
+        {
+          "name": "Protein",
+          "amount": 1.2,
+          "unit": "g"
+        },
+        {
+          "name": "Fat",
+          "amount": 0,
+          "unit": "g"
+        },
+        {
+          "name": "Carbohydrates",
+          "amount": 13,
+          "unit": "g"
+        },
+        {
+          "name": "Energy",
+          "amount": 60,
+          "unit": "kcal"
+        }
+      ]
+    },
+    "nutrition for apple": {
+      "description": "Apple",
+      "nutrients": [
+        {
+          "name": "Protein",
+          "amount": 0.3,
+          "unit": "g"
+        },
+        {
+          "name": "Fat",
+          "amount": 0,
+          "unit": "g"
+        },
+        {
+          "name": "Carbohydrates",
+          "amount": 14,
+          "unit": "g"
+        },
+        {
+          "name": "Energy",
+          "amount": 52,
+          "unit": "kcal"
+        }
+      ]
+    },
+    "nutrition of an apple": {
+      "description": "Apple",
+      "nutrients": [
+        {
+          "name": "Protein",
+          "amount": 0.3,
+          "unit": "g"
+        },
+        {
+          "name": "Fat",
+          "amount": 0.2,
+          "unit": "g"
+        },
+        {
+          "name": "Carbohydrates",
+          "amount": 14,
+          "unit": "g"
+        },
+        {
+          "name": "Energy",
+          "amount": 52,
+          "unit": "kcal"
+        }
+      ]
+    },
+    "hi": {
+      "description": "hi",
+      "nutrients": [
+        {
+          "name": "Protein",
+          "amount": 0,
+          "unit": "g"
+        },
+        {
+          "name": "Fat",
+          "amount": 0,
+          "unit": "g"
+        },
+        {
+          "name": "Carbohydrates",
+          "amount": 0,
+          "unit": "g"
+        },
+        {
+          "name": "Energy",
+          "amount": 0,
+          "unit": "kcal"
+        }
+      ]
+    },
+    "hello": {
+      "description": "hello",
+      "nutrients": [
+        {
+          "name": "Protein",
+          "amount": 0,
+          "unit": "g"
+        },
+        {
+          "name": "Fat",
+          "amount": 0,
+          "unit": "g"
+        },
+        {
+          "name": "Carbohydrates",
+          "amount": 0,
+          "unit": "g"
+        },
+        {
+          "name": "Energy",
+          "amount": 0,
+          "unit": "kcal"
+        }
+      ]
+    },
+    "i need to know what my favorite food is": {
+      "description": "I need to know what my favorite food is",
+      "nutrients": [
+        {
+          "name": "Protein",
+          "amount": 0,
+          "unit": "g"
+        },
+        {
+          "name": "Fat",
+          "amount": 0,
+          "unit": "g"
+        },
+        {
+          "name": "Carbohydrates",
+          "amount": 0,
+          "unit": "g"
+        },
+        {
+          "name": "Energy",
+          "amount": 0,
+          "unit": "kcal"
+        }
+      ]
+    },
+    "how much nutritional values in 100grams of canned tuna": {
+      "description": "Canned Tuna",
+      "nutrients": [
+        {
+          "name": "Protein",
+          "amount": 25,
+          "unit": "g"
+        },
+        {
+          "name": "Fat",
+          "amount": 1,
+          "unit": "g"
+        },
+        {
+          "name": "Carbohydrates",
+          "amount": 0,
+          "unit": "g"
+        },
+        {
+          "name": "Energy",
+          "amount": 116,
+          "unit": "kcal"
+        }
+      ]
+    },
+    "what is the nutritional value for the canned tuna": {
+      "description": "Canned Tuna",
+      "nutrients": [
+        {
+          "name": "Protein",
+          "amount": 25,
+          "unit": "g"
+        },
+        {
+          "name": "Fat",
+          "amount": 1,
+          "unit": "g"
+        },
+        {
+          "name": "Carbohydrates",
+          "amount": 0,
+          "unit": "g"
+        },
+        {
+          "name": "Energy",
+          "amount": 110,
+          "unit": "kcal"
+        }
+      ]
+    },
+    "and what to eat in those for low carbs": {
+      "description": "Low-carb foods",
+      "nutrients": [
+        {
+          "name": "Protein",
+          "amount": 20,
+          "unit": "g"
+        },
+        {
+          "name": "Fat",
+          "amount": 10,
+          "unit": "g"
+        },
+        {
+          "name": "Carbohydrates",
+          "amount": 5,
+          "unit": "g"
+        },
+        {
+          "name": "Energy",
+          "amount": 200,
+          "unit": "kcal"
+        }
+      ]
+    }
+  }
+}

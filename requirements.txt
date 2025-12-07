@@ -1,0 +1,12 @@
+
+fastapi
+uvicorn
+python-multipart
+httpx
+python-dotenv
+openai
+playsound
+google-search-results
+langchain
+langgraph
+spoon-ai-sdk
